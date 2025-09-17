@@ -21,18 +21,16 @@ def drawPolygon(myTurtle, sides, size=100):
 
 def fillCorner(myTurtle, corner, size=100):
     drawSquare(myTurtle, size)
-    half = size / 2
-    quarter = size / 2
     myTurtle.penup()
     if corner == 1:
         myTurtle.goto(0,0)
     elif corner == 2:
-        myTurtle.goto(0,half)
+        myTurtle.goto(50,0)
     elif corner == 3:
-        myTurtle.goto(0, 0)
+        myTurtle.goto(0,-50)
     elif corner == 4:
-        myTurtle.goto(-half, 0)
-    
+        myTurtle.goto(50, -50)
+    #1-topleft,2-topright,3-bottomleft,4-bottomright
     myTurtle.pendown()
     myTurtle.begin_fill()
     drawSquare(myTurtle, size/2)
@@ -57,7 +55,7 @@ def main():
     #drawPolygon(myTurtle, 5) #draws a pentagon
     #drawPolygon(myTurtle, 8) #draws an octogon
 
-    fillCorner(myTurtle, 2) #draws a square with top right corner filled in.
+    #fillCorner(myTurtle, 2) #draws a square with top right corner filled in.
     #fillCorner(myTurtle, 3) #draws a square bottom left corner filled in.
 
     #squaresInSquares(myTurtle, 5) #draws 5 concentric squares
